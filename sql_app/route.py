@@ -21,6 +21,7 @@ async def get_all_students():
         return get_all_students
 
 
+
 @post_route.get("/{id}", response_model=Student, status_code=200)
 async def get_student(id:int):
     query = students.select().where(students.c.id == id)
